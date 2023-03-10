@@ -1,4 +1,5 @@
 #include <sys/stat.h>
+#include <unistd.h>
 
 #include "spdlog/cfg/env.h" // support for loading levels from the environment variable
 #include "spdlog/fmt/bin_to_hex.h"
