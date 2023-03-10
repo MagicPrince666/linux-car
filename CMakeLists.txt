@@ -85,7 +85,7 @@ add_subdirectory(src/lib_json)
 
 add_library (liblive555 STATIC ${LIVESOURCE})
 
-set(EXEC_NAME SmartCar)
+set(EXEC_NAME ros_car)
 
 file(GLOB main_srcs 
     src/*.cpp

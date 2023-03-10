@@ -2,7 +2,6 @@
 build/
 **/*.o
 **/*.a
-RemoteCar
 **/.DS_Store
 docs/.DS_Store
 live555/
