@@ -1,0 +1,33 @@
+{
+    "chip": "ArmPi",
+    "bts7960_lis": -1,
+    "bts7960_ris": -1,
+    "moto_ena": 71,
+    "moto_enb": 110,
+    "sbus": "/dev/ttyS1",
+    "gps": "/dev/ttyS2",
+    "i2c": "/dev/i2c-0",
+    "distance": {
+        "srf04" : true,
+        "vl53l0x": true
+    },
+    "rotary_encoder":{
+        "device": "/dev/input/event0",
+        "reduction_ratio": 34,
+        "precision": 12
+    },
+    "moto_pwm": {
+        "chip": 0,
+        "channel": 0,
+        "polarity": true,
+        "period": 40000,
+        "dutycycle": 0
+    },
+    "servo_pwm": {
+        "chip": 1,
+        "channel": 0,
+        "polarity": true,
+        "period": 20000000,
+        "dutycycle": 1500000
+    }
+}

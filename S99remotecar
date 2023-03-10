@@ -1,0 +1,27 @@
+#!/bin/sh
+
+[ -f /usr/sbin/SmartCar ] || exit 0
+
+case "$1" in
+	start)
+		printf "Starting SmartCar: "
+		# /usr/sbin/SmartCar >> /tmp/SmartCar.log &
+		start-stop-daemon -S -x /usr/sbin/SmartCar >> /tmp/SmartCar.log &
+		[ $? = 0 ] && echo "OK" || echo "FAIL"
+		;;
+	stop)
+		printf "Stopping SmartCar: "
+		# killall -9 SmartCar
+		start-stop-daemon -K -q -x /usr/sbin/SmartCar
+		[ $? = 0 ] && echo "OK" || echo "FAIL"
+		;;
+	restart|reload)
+		$0 stop
+		$0 start
+		;;
+	*)
+		echo "Usage: $0 {start|stop|restart}"
+		exit 1
+esac
+
+exit 0

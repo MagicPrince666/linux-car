@@ -1,0 +1,31 @@
+syntax = "proto3";
+option optimize_for = LITE_RUNTIME;
+
+
+package Leo;
+
+message MapMetadata {
+    string version = 1 ;
+    bool lose_signal = 2; // 失控标识
+
+    bool front         = 3; // 前进按钮
+    bool back          = 4; // 后退按钮
+    bool left          = 5; // 左转按钮
+    bool right         = 6; // 右转按钮
+    bool select        = 7; // 选择按钮
+    bool start         = 8; // 开始按钮
+    bool l1            = 9; // 左顶部按钮1
+    bool l2            = 10; // 左顶部按钮2
+    bool r1            = 11; // 右顶部按钮1
+    bool r2            = 12; // 右顶部按钮2
+    bool adl           = 13; // 左摇杆按钮
+    bool adr           = 14; // 右摇杆按钮
+    bool triangle      = 15; // 三角按钮
+    bool quadrilateral = 16; // 四边形按钮
+    bool rotundity     = 17; // 园形按钮
+    bool fork          = 17; // 叉按钮
+    uint32 adslx      = 18;    // 左摇杆x轴
+    uint32 adsly      = 19;    // 左摇杆y轴
+    uint32 adsrx      = 20;    // 右摇杆x轴
+    uint32 adsry      = 21;    // 右摇杆y轴
+}
